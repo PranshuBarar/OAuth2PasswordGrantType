@@ -1,0 +1,18 @@
+dependencies {
+    implementation project(':repo-service')
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+}
+
+bootJar {
+    enabled = false
+}
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+jar {
+    enabled = true
+}
